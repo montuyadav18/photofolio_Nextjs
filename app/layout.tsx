@@ -50,7 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <head>
         {/* Favicon */}
-        <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+        <link rel="shortcut icon" href="/images/favicon.svg" type="image/x-icon" />
 
         {/* Google Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />

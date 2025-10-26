@@ -29,10 +29,10 @@ export default function Header() {
                         {/* Logo Link (Next.js Link and Image) */}
                         <Link href="/" className="d-block">
                             <Image
-                                src="/images/logo/logo.png"
+                                src="/images/logo/logo.svg"
                                 alt="logo"
-                                width={100}
-                                height={40}
+                                width={280}
+                                height={60}
                                 priority
                             />
                         </Link>
@@ -112,9 +112,9 @@ export default function Header() {
                         {/* Offcanvas Logo Link */}
                         <Link href="/">
                             <Image
-                                src="/images/logo/offcanvas-logo.png"
+                                src="/images/logo/offcanvas-logo.svg"
                                 alt="offcanvas logo"
-                                width={100}
+                                width={200}
                                 height={40}
                             />
                         </Link>

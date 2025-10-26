@@ -29,8 +29,8 @@ export default function Meta(props: MetaProps) {
             <meta name="robots" content="index, follow" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <link rel="canonical" href={meta.url} />
-            <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
-            <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+            <link rel="shortcut icon" href="/images/favicon.svg" type="image/x-icon" />
+            <link rel="apple-touch-icon" href="/images/favicon.svg" />
             <meta name="theme-color" content="#000000" />
 
             {/* Open Graph */}
