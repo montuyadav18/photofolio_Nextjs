@@ -18,12 +18,40 @@ export async function POST(request) {
       );
     }
 
+    // Check required env vars for sending email
+    const GMAIL_USER = process.env.GMAIL_USER;
+    const GMAIL_PASS = process.env.GMAIL_PASS;
+    const RECEIVING_EMAIL = process.env.RECEIVING_EMAIL;
+    const MAILER_DISABLED = String(process.env.MAILER_DISABLED || "").toLowerCase();
+
+    if (!MAILER_DISABLED || MAILER_DISABLED === "false") {
+      if (!GMAIL_USER || !GMAIL_PASS || !RECEIVING_EMAIL) {
+        console.error("Missing email environment variables (GMAIL_USER, GMAIL_PASS, RECEIVING_EMAIL)");
+        return NextResponse.json(
+          {
+            status: "error",
+            message:
+              "Email service not configured. Missing server environment variables.",
+          },
+          { status: 500 }
+        );
+      }
+    }
+
+    // Allow a disabled/mocked-mailer mode for local testing (set MAILER_DISABLED=1)
+    const mockMailer = MAILER_DISABLED === "1" || MAILER_DISABLED === "true";
+
+    // Create transporter using SMTP config (more explicit than `service: 'gmail'`)
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: process.env.SMTP_HOST || "smtp.gmail.com",
+      port: Number(process.env.SMTP_PORT) || 465,
+      secure: process.env.SMTP_PORT ? Number(process.env.SMTP_PORT) === 465 : true,
       auth: {
-        user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_PASS,
+        user: GMAIL_USER,
+        pass: GMAIL_PASS,
       },
+      // TLS option can be adjusted for strictness in production
+      tls: { rejectUnauthorized: process.env.NODE_ENV === "production" },
     });
 
     const logoUrl = process.env.SITE_URL
@@ -190,17 +218,29 @@ export async function POST(request) {
 `;
 
 
-    // ---------- SEND EMAILS ----------
+    // ---------- SEND EMAILS (or mock) ----------
+    if (mockMailer) {
+      // In mock mode we don't send emails — just log payload and return success.
+      console.log("[MAILER MOCK] Admin email would be sent to:", RECEIVING_EMAIL);
+      console.log("[MAILER MOCK] User reply would be sent to:", email);
+      return NextResponse.json(
+        { status: "success", message: "(Mock) Email would be sent (MAILER_DISABLED)." },
+        { status: 200 }
+      );
+    }
+
+    // Send admin notification
     await transporter.sendMail({
-      from: `Portfolio Contact Form <${process.env.GMAIL_USER}>`,
-      to: process.env.RECEIVING_EMAIL,
+      from: `Portfolio Contact Form <${GMAIL_USER}>`,
+      to: RECEIVING_EMAIL,
       replyTo: email,
       subject: `✨ Sajjat Mujawar Portfolio Website - ${subject}`,
       html: adminHtml,
     });
 
+    // Send auto-reply to user
     await transporter.sendMail({
-      from: `Sajjat Mujawar Portfolio <${process.env.GMAIL_USER}>`,
+      from: `Sajjat Mujawar Portfolio <${GMAIL_USER}>`,
       to: email,
       subject: `✅ Message received successfully, ${name}!`,
       html: userHtml,
