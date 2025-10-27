@@ -3,34 +3,35 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "next lint"
   },
   "dependencies": {
-    "@sendgrid/mail": "^8.1.6",
+    "@sendgrid/mail": "^7.7.0",
     "aos": "^2.3.4",
-    "classnames": "^2.5.1",
+    "classnames": "^2.3.2",
     "jquery": "^3.7.1",
-    "magnific-popup": "^1.2.0",
-    "next": "15.5.4",
-    "nodemailer": "^7.0.10",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "react-hot-toast": "^2.6.0"
+    "magnific-popup": "^1.1.0",
+    "next": "13.5.4",
+    "nodemailer": "^6.9.7",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hot-toast": "^2.4.1"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4",
+    "@netlify/plugin-nextjs": "^4.41.3",
     "@types/aos": "^3.0.7",
-    "@types/node": "^20",
-    "@types/nodemailer": "^7.0.3",
-    "@types/react": "^19.2.2",
-    "@types/react-dom": "^19.2.2",
-    "eslint": "^9",
-    "eslint-config-next": "15.5.4",
-    "tailwindcss": "^4",
-    "typescript": "^5.9.3"
+    "@types/node": "^20.8.10",
+    "@types/nodemailer": "^6.4.14",
+    "@types/react": "^18.2.33",
+    "@types/react-dom": "^18.2.14",
+    "eslint": "^8.52.0",
+    "eslint-config-next": "13.5.4",
+    "typescript": "^5.2.2"
+  },
+  "engines": {
+    "node": ">=18.17.0"
   }
 }
