@@ -1,7 +1,6 @@
 [build]
-  # Let the Netlify Next.js plugin manage the publish directory.
-  # Do NOT set `publish` here when using @netlify/plugin-nextjs.
   command = "npm run build"
+  publish = ".next"
   functions = "netlify/functions"
 
 [[plugins]]
