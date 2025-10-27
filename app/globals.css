@@ -1,15 +1,10 @@
-/* @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,52 +14,12 @@
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-} */
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-/* ➡️ ADD THESE LINES TO ENSURE SCROLLING WORKS */
 html,
 body {
-  height: 100%; /* Makes them take the full viewport height */
-}
-
-/* If you are using Next.js App Router, 
-   you might also need to target the root div: 
-   #__next is common in older setups, or you might 
-   need a class/id from your app/layout.tsx file.
-*/
-.white-header.bg-white {
-  /* Styles for the Header when *it* has both classes */
-  color: #000;
-  background-color: #fff;
+  height: 100%;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-  /* Ensure overflow-y is not hidden here either */
 }

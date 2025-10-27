@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
 });
 
@@ -74,7 +74,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="canonical" href="https://www.yourwebsite.com" />
         <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${inter.variable} ${dmSans.variable} antialiased`}>
         {children}
 
         {/* Vendor JS */}
