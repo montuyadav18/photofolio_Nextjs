@@ -27,7 +27,7 @@ export default function Header() {
                     <div className="header-border-bottom d-flex align-items-center justify-content-between flex-grow-1">
 
                         {/* Logo Link (Next.js Link and Image) */}
-                        <Link href="/" className="d-block">
+                        <Link href="/" className="d-block w-[160px] sm:w-[200px] md:w-[280px]">
                             <Image
                                 src="/images/logo/logo.svg"
                                 alt="logo"
@@ -114,8 +114,8 @@ export default function Header() {
                             <Image
                                 src="/images/logo/offcanvas-logo.svg"
                                 alt="offcanvas logo"
-                                width={200}
-                                height={40}
+                                width="200"
+                                height="40"
                             />
                         </Link>
 
