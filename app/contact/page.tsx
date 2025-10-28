@@ -166,7 +166,7 @@ export default function Project() {
                                             </span>
                                             <div className="flex flex-col flex-1">
                                                 <span className="text-base leading-none">Email us</span>
-                                                <h5 className="text-xl font-bold font-Syne text-black leading-7">hello@henry.com</h5>
+                                                <h5 className="text-xl font-bold font-Syne text-black leading-7">sajjatmujawar16@gmail.com</h5>
                                             </div>
                                         </div>
 

@@ -190,31 +190,43 @@ export default function About() {
                         <div className="container">
                             <div className="about-grid">
                                 {/* Using Image component for about image */}
-                                <Image className="mx-auto" src="/images/about/about2.png" alt="about me" width={400} height={500} />
+                                <Image
+                                    className="mx-auto"
+                                    src="/images/about/about2.png"
+                                    alt="about me"
+                                    width={400}
+                                    height={500}
+                                />
                                 <div className="fw-bold font-Syne leading-none d-flex flex-wrap flex-column gap-y-2">
-                                    <span className="text-warning text-xl">About me</span>
-                                    <h3 className="text-dark section-title">
-                                        Sajjat Mujawar
-                                    </h3>
+                                    <span className="text-warning text-xl">About Me</span>
+                                    <h3 className="text-dark section-title">Sajjat Mujawar</h3>
 
-                                    <h4 className="text-dark text-2xl mt-3 mb-4">Product Designer</h4>
+                                    <h4 className="text-dark text-2xl mt-3 mb-4">Creative Designer</h4>
                                     <p className="text-dark text-xl fw-bold font-Syne leading-7 mb-6">
-                                        A Product Designer & Developer and I am in the game for over 7+ years. I am proud of my
-                                        works and ready to face the next challenge
+                                        I’m a Creative Designer & Front-End Developer with over 5+ years of
+                                        experience in crafting visual stories that inspire and engage. I take
+                                        pride in my work and constantly strive to push creative boundaries.
                                     </p>
                                     <p className="paragraph mb-6">
-                                        That is where I come in. A lover of words, a wrangler of copy. Here to create copy that not
-                                        only reflects who you are and what you stand for, but words that truly land with those that
-                                        read them, calling your audience in and making them .
+                                        I specialize in blending design thinking with technical execution to
+                                        build meaningful brand experiences. From concept to creation, my goal
+                                        is to design visuals that communicate clearly and connect deeply with
+                                        the audience.
                                     </p>
                                     <div>
                                         {/* Using Image component for signature */}
-                                        <Image src="/images/signature.svg" alt="signature" width={150} height={50} />
+                                        <Image
+                                            src="/images/virtual-signature-black.svg"
+                                            alt="signature"
+                                            width={150}
+                                            height={50}
+                                        />
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </section>
+
                     {/* About Me Section End */}
 
                     {/* Experience Section Start */}
@@ -250,7 +262,7 @@ export default function About() {
                                 <div className="d-flex flex-column justify-content-end">
                                     <div className="d-flex flex-wrap flex-column years-of-experience mb-12">
                                         <span
-                                            className="years-experience-of-number text-dark fw-bold font-Syne leading-none d-inline-block position-relative">12+</span>
+                                            className="years-experience-of-number text-dark fw-bold font-Syne leading-none d-inline-block position-relative">5+</span>
                                         <span className="strock-text">Years of <br /> experience</span>
                                     </div>
 
@@ -258,7 +270,7 @@ export default function About() {
                                         <div className="d-flex flex-column flex-wrap gap-y-2">
                                             <span className="text-warning text-lg fw-normal leading-none">SAY HELLO!</span>
                                             <h4 className="text-white text-2xl fw-bold font-Syne leading-none mb-0">
-                                                hello@henry.com
+                                                sajjatmujawar16@gmail.com
                                             </h4>
                                         </div>
                                         <div className="d-flex flex-wrap justify-content-end">
@@ -335,19 +347,60 @@ export default function About() {
                                         <div id="about_me_tab" className="tab-pane fade show active position-relative">
                                             <div className="about-me-grid">
                                                 {/* Using Image component for about me tab image */}
-                                                <Image src="/images/about/about3.png" alt="about me" width={300} height={400} />
+                                                <Image
+                                                    src="/images/about/about3.png"
+                                                    alt="about me"
+                                                    width={300}
+                                                    height={400}
+                                                />
                                                 <div>
-                                                    <h4 className="text-dark text-2xl based-in-german-title-tab fw-bold font-Syne">Based in India</h4>
-                                                    <p className="paragraph mb-7">Sajjat Mujawar, <span className="text-dark">Product Designer</span>, based in India. That is where I come in. A lover of words, a wrangler of copy. Here to create copy that not only reflects who you are and what you stand for,</p>
-                                                    <p className="paragraph mb-14">but words that truly land with those that read them, calling your audience in and making them want more.</p>
+                                                    <h4 className="text-dark text-2xl based-in-german-title-tab fw-bold font-Syne">
+                                                        Based in Mumbai
+                                                    </h4>
+                                                    <p className="paragraph mb-7">
+                                                        Sajjat Mujawar,{" "}
+                                                        <span className="text-dark">Creative Designer</span>, based in Mumbai.
+                                                        A multidisciplinary designer passionate about blending creativity and
+                                                        strategy to craft meaningful visual experiences that inspire and engage.
+                                                    </p>
+                                                    <p className="paragraph mb-14">
+                                                        I focus on turning ideas into visually compelling stories through
+                                                        thoughtful design, attention to detail, and a strong understanding of
+                                                        user experience and brand identity.
+                                                    </p>
 
                                                     <ul className="flex-column gap-3 d-inline-flex list-unstyled p-0">
-                                                        {['Name', 'Nationality', 'Phone', 'Email', 'Experience', 'Freelance', 'Skype', 'Language'].map((label, index) => {
-                                                            const values = ['Sajjat Mujawar', 'Indian', '+91 90294 03595', 'hello@henry.com', '12+ years', 'Available', 'henry.halk23', 'English, Hindi, Marathi, Konkani'];
+                                                        {[
+                                                            "Name",
+                                                            "Nationality",
+                                                            "Phone",
+                                                            "Email",
+                                                            "Experience",
+                                                            "Freelance",
+                                                            "Skype",
+                                                            "Language",
+                                                        ].map((label, index) => {
+                                                            const values = [
+                                                                "Sajjat Mujawar",
+                                                                "Indian",
+                                                                "+91 90294 03595",
+                                                                "sajjatmujawar16@gmail.com",
+                                                                "5+ years",
+                                                                "Available",
+                                                                "sajjat.mujawar",
+                                                                "English, Hindi, Marathi",
+                                                            ];
                                                             return (
-                                                                <li key={index} className="gap-10 d-inline-flex align-items-center">
-                                                                    <span className="w-110px text-black-text-800 text-lg fw-normal leading-none">{label}</span>
-                                                                    <span className="text-dark text-2xl fw-bold font-Syne leading-8">{values[index]}</span>
+                                                                <li
+                                                                    key={index}
+                                                                    className="gap-10 d-inline-flex align-items-center"
+                                                                >
+                                                                    <span className="w-110px text-black-text-800 text-lg fw-normal leading-none">
+                                                                        {label}
+                                                                    </span>
+                                                                    <span className="text-dark text-2xl fw-bold font-Syne leading-8">
+                                                                        {values[index]}
+                                                                    </span>
                                                                 </li>
                                                             );
                                                         })}

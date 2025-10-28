@@ -1670,7 +1670,7 @@ only screen and (min-width: 1441px) {
 @media only screen and (min-width: 1280px) and (max-width: 1440px),
 only screen and (min-width: 1441px) {
   .say-hello-contact-box h4 {
-    font-size: 32px;
+    font-size: 28px;
   }
 }
 
